@@ -22,7 +22,7 @@ function bye(name) {
         resolve();
       }, 1000);
    }
-   reject('Error simulado');
+   reject(new Error("Test Error"));
   });
 }
 hello("Joseph")
