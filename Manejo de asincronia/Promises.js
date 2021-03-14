@@ -1,18 +1,33 @@
-function hello(name,callback) {
+function hello(name) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-        console.log(`Hello, ${name}`);
-        callback(name);
-    },1000);
+      console.log(`Hello, ${name}`);
+      resolve(name);
+    }, 1000);
+  });
 }
-function talk(callback_talk) {
+function talk(name) {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-        console.log('Bla,bla,bla');
-        callback_talk();
-    }, 1000);    
+      console.log("Bla,bla,bla");
+      resolve(name);
+    }, 1000);
+  });
 }
-function bye(name,another_callback) {
+function bye(name) {
+  return new Promise((resolve, reject) => {
+   if (!true) {
     setTimeout(() => {
         console.log(`Bye, ${name}`);
-        another_callback();
-    }, 1000);
+        resolve();
+      }, 1000);
+   }
+   reject('Error simulado');
+  });
 }
+hello("Joseph")
+  .then(talk)
+  .then(talk)
+  .then(bye)
+  .then((nombre) => console.log("Fin de proceso"))
+  .catch(error=>console.error(error));
