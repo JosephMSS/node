@@ -36,4 +36,4 @@ read(DIR, console.log);
 write(DIR, content, console.log);
 write(DIR2, content, console.log);
 read(DIR, console.log);
-destroy(DIR, console.log);
+// destroy(DIR, console.log);
