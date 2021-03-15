@@ -39,3 +39,5 @@
 ## [Errores](./Try_catch.js)
 ### Funciones asincronas
 > En las funciones asincronas si intentamos obtener los errores desde el hilo principal nos va a arrojar error ya que el errore se ejecuto en otro hilo, por lo que es importante obtener estos errores dentro de la funcion asincrona.
+
+## [HTTP](./Http.js)
